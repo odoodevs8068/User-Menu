@@ -17,7 +17,7 @@
             '/hide_user_menu/static/src/js/users_menu.js',
         ],
     },
-    'images': ['static/description/assets/screenshots/banner.png'],
+    'images': ['static/description/assets/screenshots/hide_menu_user.gif'],
     'installable': True,
     'application': True,
     'auto_install': False,
