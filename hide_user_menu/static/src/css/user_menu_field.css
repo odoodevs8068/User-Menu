@@ -1,0 +1,13 @@
+.o_Chatter_scrollPanel {
+    display: none;
+}
+.o_ChatterTopbar {
+    display: none;
+}
+.o_ShowChatterButton{
+    display: block;
+}
+
+.o_HideChatterButton {
+    display: none;
+}

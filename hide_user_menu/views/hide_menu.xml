@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="res_config_settings_view_form_inherit" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="priority" eval="0"/>
+            <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name ='integration']" position="after">
+                    <h2>Hide User Menu</h2>
+                    <div class="row mt16 o_settings_container" name="hide_user_menus">
+                        <div class="col-12 col-lg-6 o_setting_box" id="hide_menus">
+                            <label for="users_menus_ids"/>
+                            <field name="users_menus_ids" widget="many2many_tags" style="max-width : 70%;"
+                                   options="{'no_edit': True, 'no_create': True, 'no_open': True, 'no_quick_create': True}"/>
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+</odoo>
+
+
+<!--    <template id="remove_manage_database" inherit_id="web.login_layout" name="Login Layout">-->
+<!--                <xpath expr="//div[1]" position="replace">-->
+<!--                        <div t-attf-class="card border-0 mx-auto bg-100 {{login_card_classes}} o_database_list" style="max-width: 300px;">-->
+<!--                            <div class="card-body">-->
+<!--                                <div t-attf-class="text-center pb-3 border-bottom {{'mb-3' if form_small else 'mb-4'}}">-->
+<!--                                    <img t-attf-src="/web/binary/company_logo{{ '?dbname='+db if db else '' }}" alt="Logo" style="max-height:120px; max-width: 100%; width:auto"/>-->
+<!--                                </div>-->
+<!--                                <t t-raw="0"/>-->
+<!--                                <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">-->
+<!--                                    <a class="border-right pr-2 mr-1" href="https://www.apexindustries.ca" target="_blank">APEX INDUSTRY</a>-->
+<!--                                    <a href="https://www.jetzerp.com" target="_blank">Powered by<span>JETZERP</span></a>-->
+<!--                                </div>-->
+<!--                                <div class="text-center small mt-4 pt-3 border-top" t-if="not disable_footer">-->
+<!--                                    <button type="button" id="retrieve_password">Retreive Password</button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                </xpath>-->
+<!--    </template>-->
